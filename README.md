@@ -24,7 +24,7 @@
 - `-SubDomainList` (Optional): A path to a file containing a list of subdomains. Defaults to `.\subdomains-10000.txt`.
 - `-OutPutFile` (Optional): The base name for output files. Defaults to `OutPut`.
 
-### Example
+### Example for Deafult Script
 
 To resolve a single domain with the default subdomains list:
 
@@ -38,6 +38,32 @@ To resolve domains from a list with a custom subdomain list:
 For OutPut file
 ```powershell
 .\Get-SubDomain.ps1 -DomainsList "path\to\domains.txt" -SubDomainList "path\to\subdomains.txt" -OutPutFile OutPut.txt
+```
+
+### Example for Jobs script
+
+To resolve a single domain with the default subdomains list:
+
+```powershell
+.\Get-SubDomain.ps1 -Domain "example.com" -SubDomainList "path\to\subdomains.txt"
+```
+
+```powershell
+.\Get-SubDomain.ps1 -Domain "twitter.com" -SubDomainList $PWD\subdomains-10000.txt
+```
+To resolve domains from a list with a custom subdomain list:
+```powershell
+.\Get-SubDomain.ps1 -DomainsList "path\to\domains.txt" -SubDomainList "path\to\subdomains.txt"
+```
+```powershell
+.\Get-SubDomain.ps1 -DomainsList $PWD\domains.txt -SubDomainList $PWD\subdomains-10000.txt
+```
+For OutPut file
+```powershell
+.\Get-SubDomain.ps1 -DomainsList "path\to\domains.txt" -SubDomainList "path\to\subdomains.txt" -OutPutFile OutPut.txt
+```
+```powershell
+.\Get-SubDomain.ps1 -DomainsList $PWD\domains.txt -SubDomainList $PWD\subdomains-10000.txt -OutPutFile OutPut.txt
 ```
 
 ### Output
