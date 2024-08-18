@@ -6,7 +6,7 @@ Param(
     [Parameter(Mandatory = $false)]
     [String]$SubDomainList = ".\subdomains-10000.txt",
     [Parameter(Mandatory = $false)]
-    [String]$OutPutFile = "./OutPut"
+    [String]$OutPutFile = "OutPut.txt"
 )
 
 function ResolveIP {
