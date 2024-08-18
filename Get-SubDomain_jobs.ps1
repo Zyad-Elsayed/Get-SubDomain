@@ -156,3 +156,4 @@ function Main {
 # Measure the time taken to run the Main function
 $timeTaken = Measure-Command { Main }
 Write-Host -ForegroundColor Green "Script completed in $($timeTaken.TotalSeconds) seconds."
+
